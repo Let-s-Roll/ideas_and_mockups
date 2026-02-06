@@ -4,842 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's Roll - Global Events & Learning Hub Mockup</title>
+    <title>Let's Roll - Product Roadmap</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lr-black': '#0a0a0a',
+                        'lr-yellow': '#fbbf24',
+                        'lr-purple': '#581c87',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* Custom Scrollbar hiding for clean horizontal scroll */
-        .hide-scroll::-webkit-scrollbar {
-            display: none;
+        body {
+            background-color: #050505;
+            color: white;
         }
 
-        .hide-scroll {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Mobile Frame Styling */
-        .mobile-frame {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            border-radius: 40px;
-            overflow: hidden;
-            border: 8px solid #1f2937;
+        .glass-card:hover {
+            border-color: rgba(251, 191, 36, 0.5);
+            /* Yellow hover */
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
     </style>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 font-sans">
+<body class="min-h-screen flex flex-col font-sans selection:bg-lr-yellow selection:text-black">
 
-    <!-- Mobile Frame Container -->
-    <div class="mobile-frame w-full max-w-md h-[850px] bg-white relative flex flex-col">
-
-        <!-- App Header (Yellow) -->
-        <div id="app-header" class="bg-yellow-300 sticky top-0 z-30 shadow-sm">
-            <!-- Top Bar: Chat | Discover | Profile -->
-            <div class="px-4 py-3 flex justify-between items-center">
-                <div class="flex gap-4 text-purple-900">
-                    <i class="fas fa-question-circle text-xl"></i>
-                    <i class="fas fa-comment text-xl"></i>
-                </div>
-                <h1 class="text-xl font-black text-purple-900 tracking-tight">Discover</h1>
-                <div class="flex gap-4 text-purple-900 items-center">
-                    <span class="bg-purple-100 p-1 rounded-full"><i class="fas fa-user-plus text-sm"></i></span>
-                    <i class="fas fa-bell text-xl"></i>
-                </div>
+    <!-- Header -->
+    <header class="py-8 px-6 border-b border-white/10 sticky top-0 bg-black/80 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-skating text-3xl text-lr-yellow"></i>
+                <h1 class="text-2xl font-black tracking-tighter uppercase">Let's Roll <span
+                        class="text-lr-yellow text-sm align-top">LABS</span></h1>
             </div>
-
-            <!-- Sub-Navigation: Places | People | Events -->
-            <div class="flex font-bold text-sm text-center pb-2">
-                <div class="flex-1 text-gray-500/70 py-2 cursor-pointer hover:text-purple-900"><i
-                        class="fas fa-map-marker-alt mr-1"></i> Places</div>
-                <div class="flex-1 text-gray-500/70 py-2 cursor-pointer hover:text-purple-900"><i
-                        class="fas fa-hand-paper mr-1"></i> People</div>
-                <div class="flex-1 text-purple-900 py-2 border-b-4 border-purple-900 bg-white/20"><i
-                        class="fas fa-calendar-alt mr-1"></i> Events</div>
-            </div>
+            <a href="https://github.com/Let-s-Roll/ideas_and_mockups" target="_blank"
+                class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
         </div>
+    </header>
 
-        <!-- Main Content Area -->
-        <div id="content-area" class="flex-1 overflow-y-auto bg-gray-50 relative">
+    <!-- Content -->
+    <main class="flex-1 px-6 py-12">
+        <div class="max-w-6xl mx-auto">
 
-            <!-- VIEW 1: EVENTS (Spotlight Carousel) -->
-            <div id="view-events" class="block">
-
-
-                <!-- SPOTLIGHT CAROUSEL (Horizontal) -->
-                <div class="mt-4 pl-5">
-                    <div class="flex items-center gap-2 mb-3">
-                        <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wide">The World Tour 🌍</h2>
-                        <span
-                            class="bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">INTERNATIONAL</span>
-                    </div>
-
-                    <!-- Horizontal Scroll Container -->
-                    <div class="flex overflow-x-auto gap-4 pb-6 pr-5 hide-scroll snap-x">
-
-                        <!-- Card 1: Skate Love Barcelona -->
-                        <div onclick="openEventDetail('skate-love')"
-                            class="snap-center shrink-0 w-72 h-96 relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                            <img src="images/skate-love.png"
-                                class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition duration-500">
-                            <div
-                                class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black via-black/70 to-transparent text-white">
-                                <span
-                                    class="bg-indigo-600 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">FESTIVAL</span>
-                                <h3 class="text-2xl font-bold leading-tight mb-1">Skate Love Barcelona</h3>
-                                <div class="flex items-center text-sm text-gray-200">
-                                    <i class="fas fa-map-marker-alt mr-2 text-yellow-400"></i> Barcelona, Spain
-                                </div>
-                                <div class="mt-3 flex items-center justify-between">
-                                    <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded backdrop-blur-sm">SEPT
-                                        12-15</span>
-                                    <span class="text-xs"><i class="fas fa-skating mr-1"></i>3.2k interested</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 2: RollerCon -->
-                        <div onclick="openEventDetail('rollercon')"
-                            class="snap-center shrink-0 w-72 h-96 relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                            <img src="images/rollercon.png"
-                                class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition duration-500">
-                            <div
-                                class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black via-black/70 to-transparent text-white">
-                                <span
-                                    class="bg-pink-600 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">CONVENTION</span>
-                                <h3 class="text-2xl font-bold leading-tight mb-1">RollerCon 2026</h3>
-                                <div class="flex items-center text-sm text-gray-200">
-                                    <i class="fas fa-map-marker-alt mr-2 text-yellow-400"></i> Las Vegas, USA
-                                </div>
-                                <div class="mt-3 flex items-center justify-between">
-                                    <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded backdrop-blur-sm">JULY
-                                        8-12</span>
-                                    <span class="text-xs"><i class="fas fa-skating mr-1"></i>8k interested</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: Berlin Marathon -->
-                        <div onclick="openEventDetail('berlin')"
-                            class="snap-center shrink-0 w-72 h-96 relative rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-                            <img src="images/berlin-marathon.jpg"
-                                class="w-full h-full object-cover brightness-75 group-hover:scale-105 transition duration-500 top">
-                            <div
-                                class="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black via-black/70 to-transparent text-white">
-                                <span
-                                    class="bg-purple-600 text-xs font-bold px-2 py-1 rounded mb-2 inline-block">MARATHON</span>
-                                <h3 class="text-2xl font-bold leading-tight mb-1">BMW Berlin Marathon</h3>
-                                <div class="flex items-center text-sm text-gray-200">
-                                    <i class="fas fa-map-marker-alt mr-2 text-yellow-400"></i> Berlin, Germany
-                                </div>
-                                <div class="mt-3 flex items-center justify-between">
-                                    <span class="text-xs font-bold bg-white/20 px-2 py-1 rounded backdrop-blur-sm">SEPT
-                                        20</span>
-                                    <span class="text-xs"><i class="fas fa-skating mr-1"></i>5k interested</span>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- LOCAL SCENE (Vertical List) -->
-                <div class="px-5">
-                    <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Local Scene (Near You)</h2>
-
-                    <!-- Local Card 1: Thursday Night Skate -->
-                    <div onclick="openEventDetail('thursday-night')"
-                        class="bg-white rounded-xl p-4 shadow-sm mb-3 flex gap-4 border border-gray-100 cursor-pointer hover:border-indigo-300 transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-lg shrink-0 overflow-hidden relative">
-                            <img src="images/thursday-night-skate.jpg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-gray-900">Thursday Night Skate</h3>
-                            <p class="text-xs text-gray-500 mb-2">Hosted by @LASkateHunnies</p>
-                            <div class="flex items-center gap-3 text-xs text-gray-600">
-                                <span><i class="fas fa-map-marker-alt text-indigo-500"></i> DTLA</span>
-                                <span><i class="fas fa-skating text-indigo-500"></i> 45 interested</span>
-                            </div>
-                        </div>
-                        <button
-                            class="h-8 w-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center self-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Local Card 2: 90s R&B Skate Date -->
-                    <div onclick="openEventDetail('90s-date')"
-                        class="bg-white rounded-xl p-4 shadow-sm mb-3 flex gap-4 border border-gray-100 cursor-pointer hover:border-indigo-300 transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-lg shrink-0 overflow-hidden relative">
-                            <img src="images/90s-skate-date.jpg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-gray-900">90's R&B Skate Date</h3>
-                            <p class="text-xs text-gray-500 mb-2">Hosted by @SkateDateLA</p>
-                            <div class="flex items-center gap-3 text-xs text-gray-600">
-                                <span><i class="fas fa-map-marker-alt text-indigo-500"></i> Main St</span>
-                                <span><i class="fas fa-skating text-indigo-500"></i> 128 interested</span>
-                            </div>
-                        </div>
-                        <button
-                            class="h-8 w-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center self-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Local Card 3: Shred Hunnies -->
-                    <div onclick="openEventDetail('shred-hunnies')"
-                        class="bg-white rounded-xl p-4 shadow-sm mb-3 flex gap-4 border border-gray-100 cursor-pointer hover:border-indigo-300 transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-lg shrink-0 overflow-hidden relative">
-                            <img src="images/shred-hunnies.jpg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-gray-900">Shred Hunnies Meetup</h3>
-                            <p class="text-xs text-gray-500 mb-2">Hosted by @StonerSkatePlaza</p>
-                            <div class="flex items-center gap-3 text-xs text-gray-600">
-                                <span><i class="fas fa-map-marker-alt text-indigo-500"></i> Stoner Park</span>
-                                <span><i class="fas fa-skating text-indigo-500"></i> 1pm Sun</span>
-                            </div>
-                        </div>
-                        <button
-                            class="h-8 w-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center self-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Local Card 4: Backwards Class -->
-                    <div onclick="openEventDetail('backwards-class')"
-                        class="bg-white rounded-xl p-4 shadow-sm mb-3 flex gap-4 border border-gray-100 cursor-pointer hover:border-indigo-300 transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-lg shrink-0 overflow-hidden relative">
-                            <img src="images/backwards-class.jpg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-gray-900">Backwards Skating Class</h3>
-                            <p class="text-xs text-gray-500 mb-2">Hosted by @LearnToSkate</p>
-                            <div class="flex items-center gap-3 text-xs text-gray-600">
-                                <span><i class="fas fa-map-marker-alt text-indigo-500"></i> Rink 1</span>
-                                <span><i class="fas fa-skating text-indigo-500"></i> 15 interested</span>
-                            </div>
-                        </div>
-                        <button
-                            class="h-8 w-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center self-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Local Card 5: Santa Cruise -->
-                    <div onclick="openEventDetail('santa-cruise')"
-                        class="bg-white rounded-xl p-4 shadow-sm mb-3 flex gap-4 border border-gray-100 cursor-pointer hover:border-indigo-300 transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-lg shrink-0 overflow-hidden relative">
-                            <img src="images/santa-cruise.jpg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-gray-900">Santa Cruise 2025</h3>
-                            <p class="text-xs text-gray-500 mb-2">Hosted by @BeyondTheBoard</p>
-                            <div class="flex items-center gap-3 text-xs text-gray-600">
-                                <span><i class="fas fa-map-marker-alt text-indigo-500"></i> Santa Monica</span>
-                                <span><i class="fas fa-skating text-indigo-500"></i> 340 interested</span>
-                            </div>
-                        </div>
-                        <button
-                            class="h-8 w-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center self-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Local Card 6: Halloween Party -->
-                    <div onclick="openEventDetail('halloween')"
-                        class="bg-white rounded-xl p-4 shadow-sm mb-3 flex gap-4 border border-gray-100 cursor-pointer hover:border-indigo-300 transition">
-                        <div class="w-16 h-16 bg-gray-200 rounded-lg shrink-0 overflow-hidden relative">
-                            <img src="images/halloween-party.png" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-gray-900">Halloween Skate Party</h3>
-                            <p class="text-xs text-gray-500 mb-2">Hosted by @KingsBurbank</p>
-                            <div class="flex items-center gap-3 text-xs text-gray-600">
-                                <span><i class="fas fa-map-marker-alt text-indigo-500"></i> Burbank</span>
-                                <span><i class="fas fa-skating text-indigo-500"></i> 89 interested</span>
-                            </div>
-                        </div>
-                        <button
-                            class="h-8 w-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center self-center">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                    </div>
-
-                </div>
+            <!-- Hero -->
+            <div class="mb-16 text-center max-w-3xl mx-auto">
+                <h2
+                    class="text-5xl md:text-7xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                    Building the Future of Skating.
+                </h2>
+                <p class="text-xl text-gray-400 leading-relaxed">
+                    Explore our active prototypes, verified mockups, and upcoming concepts as we build the ultimate
+                    global skating platform.
+                </p>
             </div>
 
-            <!-- VIEW 2: LEARNING HUB (Tutorials) -->
-            <div id="view-learn" class="hidden">
-                <div class="p-5 bg-white sticky top-0 z-10 shadow-sm">
-                    <div class="flex justify-between items-center mb-4">
-                        <h1 class="text-2xl font-black text-gray-900 tracking-tighter">LEARNING HUB</h1>
-                        <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded-full">PRO</span>
-                    </div>
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <!-- Filters -->
-                    <div class="flex gap-2 overflow-x-auto pb-2 hide-scroll">
-                        <button onclick="filterTutorials('all', this)"
-                            class="filter-btn bg-black text-white px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap">All</button>
-                        <button onclick="filterTutorials('Roller Dance', this)"
-                            class="filter-btn bg-gray-100 text-gray-600 px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap hover:bg-gray-200">Roller
-                            Dance</button>
-                        <button onclick="filterTutorials('Aggressive', this)"
-                            class="filter-btn bg-gray-100 text-gray-600 px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap hover:bg-gray-200">Aggressive</button>
-                        <button onclick="filterTutorials('Speed', this)"
-                            class="filter-btn bg-gray-100 text-gray-600 px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap hover:bg-gray-200">Speed</button>
-                    </div>
-                </div>
-
-                <div class="p-4 grid gap-4">
-                    <!-- Tutorial Card 1 -->
-                    <div data-style="Roller Dance"
-                        class="tutorial-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-48 bg-gray-800 relative">
-                            <img src="https://images.unsplash.com/photo-1547447134-cd3f5c716030?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                class="w-full h-full object-cover opacity-80">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <button
-                                    class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/40 transition">
-                                    <i class="fas fa-play ml-1"></i>
-                                </button>
+                <!-- Prototype Card: Event Discovery -->
+                <a href="./event-mockup/" class="group block">
+                    <div
+                        class="glass-card rounded-2xl overflow-hidden transition-all duration-500 h-full flex flex-col">
+                        <!-- Preview Image Area -->
+                        <div class="h-64 bg-gray-900 relative overflow-hidden">
+                            <img src="./event-mockup/images/skate-love.png"
+                                class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition duration-700">
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="bg-green-500/20 text-green-400 border border-green-500/50 text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                                    LIVE PROTOTYPE
+                                </span>
                             </div>
-                            <span
-                                class="absolute top-3 left-3 bg-pink-500 text-white text-[10px] font-bold px-2 py-1 rounded">ROLLER
-                                DANCE</span>
-                            <span
-                                class="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">05:22</span>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-lg leading-tight mb-2">How to: The Crazy Legs (Beginner)</h3>
-                            <div class="flex items-center gap-2">
-                                <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                                        class="w-full h-full object-cover">
-                                </div>
-                                <div class="flex-1">
-                                    <p class="text-xs font-bold text-gray-900">SarahSkates <i
-                                            class="fas fa-check-circle text-blue-500 text-[10px]"></i></p>
-                                    <p class="text-[10px] text-gray-500">Pro Instructor</p>
-                                </div>
+
+                        <!-- Content -->
+                        <div class="p-8 flex-1 flex flex-col">
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-lr-yellow transition">Event Discovery
+                            </h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+                                An immersive, interactive mobile mockup for discovering global festivals and local skate
+                                meetups. Features dynamic detail views, filtering, and a "Learning Hub".
+                            </p>
+                            <div
+                                class="flex items-center text-sm font-bold text-white group-hover:gap-2 transition-all">
+                                Launch Prototype <i class="fas fa-arrow-right ml-2 text-lr-yellow"></i>
                             </div>
                         </div>
                     </div>
+                </a>
 
-                    <!-- Tutorial Card 2 -->
-                    <div data-style="Aggressive"
-                        class="tutorial-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-48 bg-gray-800 relative">
-                            <img src="https://images.unsplash.com/photo-1575217466549-361730594f83?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                class="w-full h-full object-cover opacity-80">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <button
-                                    class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/40 transition">
-                                    <i class="fas fa-play ml-1"></i>
-                                </button>
-                            </div>
-                            <span
-                                class="absolute top-3 left-3 bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded">AGGRESSIVE</span>
-                            <span
-                                class="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-bold px-2 py-1 rounded">08:45</span>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-lg leading-tight mb-2">First Grind: Soul Grind Basics</h3>
-                            <div class="flex items-center gap-2">
-                                <div class="w-8 h-8 rounded-full bg-gray-300 overflow-hidden">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                                        class="w-full h-full object-cover">
-                                </div>
-                                <div class="flex-1">
-                                    <p class="text-xs font-bold text-gray-900">TonyRamps <i
-                                            class="fas fa-check-circle text-blue-500 text-[10px]"></i></p>
-                                    <p class="text-[10px] text-gray-500">Pro Instructor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VIEW 3: CREATE POST (Admin/Pro View) -->
-            <div id="view-create" class="hidden h-full bg-white p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h1 class="text-2xl font-black text-gray-900">Create Post</h1>
-                    <button onclick="switchTab('events')" class="text-gray-400 hover:text-gray-900"><i
-                            class="fas fa-times text-xl"></i></button>
-                </div>
-
-                <!-- Video Upload Placeholder -->
+                <!-- Placeholder Card 1 -->
                 <div
-                    class="w-full h-48 border-2 border-dashed border-gray-300 rounded-xl flex flex-col items-center justify-center text-gray-400 mb-6 hover:bg-gray-50 cursor-pointer">
-                    <i class="fas fa-cloud-upload-alt text-3xl mb-2"></i>
-                    <span class="text-sm font-bold">Select Video</span>
-                </div>
-
-                <!-- Form Elements -->
-                <div class="space-y-6">
-                    <div>
-                        <label class="block text-sm font-bold text-gray-700 mb-1">Caption</label>
-                        <textarea
-                            class="w-full p-3 bg-gray-50 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                            rows="3" placeholder="Write something..."></textarea>
+                    class="glass-card rounded-2xl p-8 border-dashed border-white/20 flex flex-col justify-center items-center text-center opacity-50 hover:opacity-100 transition">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                        <i class="fas fa-compass text-2xl text-gray-600"></i>
                     </div>
-
-                    <!-- PRO FEATURE: Tutorial Toggle -->
-                    <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
-                        <div class="flex items-center justify-between mb-2">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-graduation-cap text-indigo-600"></i>
-                                <span class="font-bold text-gray-800">Is this a Tutorial?</span>
-                            </div>
-                            <!-- Switch -->
-                            <div
-                                class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-                                <input onchange="toggleTutorialParams(this)" type="checkbox" name="toggle"
-                                    id="tutorial-toggle"
-                                    class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-indigo-200 transition-all duration-300" />
-                                <label for="tutorial-toggle"
-                                    class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer transition-all duration-300"></label>
-                            </div>
-                        </div>
-                        <p class="text-xs text-gray-500 mb-3">Tutorials appear in the Learning Hub and can be up to 10
-                            mins long.</p>
-
-                        <!-- Style Dropdown (Hidden until toggled in real app, shown here for mockup) -->
-                        <div id="style-dropdown" class="mt-3 hidden transition-all duration-300">
-                            <label class="block text-xs font-bold text-gray-700 mb-1">Skate Style</label>
-                            <select id="post-style"
-                                class="w-full p-2 bg-white rounded-lg border border-gray-200 text-sm">
-                                <option value="">Select Style...</option>
-                                <option>Roller Dance</option>
-                                <option>Aggressive</option>
-                                <option>Speed</option>
-                                <option>Artistic</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- ADMIN FEATURE: International Event -->
-                    <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-100">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-globe-americas text-yellow-600"></i>
-                                <span class="font-bold text-gray-800">International Event</span>
-                            </div>
-                            <!-- Switch -->
-                            <div
-                                class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
-                                <input onchange="checkInternational(this)" type="checkbox" name="toggle"
-                                    id="intl-toggle"
-                                    class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-yellow-200 right-0" />
-                                <label for="intl-toggle"
-                                    class="toggle-label block overflow-hidden h-6 rounded-full bg-yellow-400 cursor-pointer"></label>
-                            </div>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-2">Triggers global notification. Use only for major
-                            festivals.</p>
-                    </div>
+                    <h3 class="text-xl font-bold mb-2">Spot Finder</h3>
+                    <p class="text-sm text-gray-500">Global map for finding and rating skate spots.</p>
+                    <span class="mt-4 text-xs font-bold text-lr-purple bg-lr-purple/10 px-3 py-1 rounded-full">COMING
+                        SOON</span>
                 </div>
 
-                <button onclick="submitPost()"
-                    class="w-full bg-black text-white font-bold py-4 rounded-xl mt-8 shadow-lg hover:scale-[1.02] transition">Post</button>
-            </div>
-
-            <!-- VIEW 4: EVENT DETAIL (Dynamic Injection Target) -->
-            <div id="view-detail" class="hidden bg-gray-50 min-h-full absolute inset-0 z-40 overflow-y-auto pb-20">
-                <!-- Header -->
-                <div class="bg-yellow-300 sticky top-0 z-30 shadow-sm px-4 py-4 flex items-center gap-4">
-                    <button onclick="switchTab('events')" class="text-purple-900"><i
-                            class="fas fa-arrow-left text-xl"></i></button>
-                    <h1 class="text-xl font-black text-purple-900 tracking-tight">Public Activity</h1>
-                </div>
-
-                <!-- Detail Content -->
-                <div class="pb-6">
-                    <!-- Hero Image -->
-                    <img id="detail-image" src="" class="w-full aspect-square object-cover">
-
-                    <div class="p-5">
-                        <!-- Title Block -->
-                        <h1 id="detail-title" class="text-2xl font-black leading-tight text-gray-900 mb-1"></h1>
-                        <p id="detail-date" class="text-gray-500 text-sm mb-6"></p>
-
-                        <!-- Action Cards -->
-                        <div class="space-y-3 mb-6">
-                            <!-- Location -->
-                            <div
-                                class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-blue-400">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <p id="detail-location-name" class="font-bold text-sm text-gray-900"></p>
-                                    <p id="detail-location-address" class="text-xs text-gray-500"></p>
-                                </div>
-                            </div>
-
-                            <!-- Link -->
-                            <div
-                                class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-yellow-400">
-                                    <i class="fas fa-link"></i>
-                                </div>
-                                <div>
-                                    <p class="font-bold text-sm text-gray-900">Learn More</p>
-                                    <p id="detail-link" class="text-xs text-blue-500 truncate w-56"></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Description -->
-                        <div class="prose prose-sm text-gray-600 mb-6">
-                            <p id="detail-description"></p>
-                        </div>
-
-                        <!-- Footer Stoked -->
-                        <div class="flex items-center gap-3 mt-8">
-                            <div class="flex -space-x-2">
-                                <img class="w-6 h-6 rounded-full border-2 border-white"
-                                    src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-                                <img class="w-6 h-6 rounded-full border-2 border-white"
-                                    src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-                            </div>
-                            <p class="text-xs text-gray-500"><span id="detail-attendees"
-                                    class="font-bold text-gray-900"></span> and others were stoked</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Interaction Sticky Footer -->
-                <div class="fixed bottom-20 left-0 right-0 p-4 pointer-events-none">
-                    <!-- Centering wrapper for mobile frame simulation if needed, but 'fixed' works relative to viewport. 
-                          Since we are inside a .mobile-frame with explicit width/height, absolute positioning relative to that frame is safer if the frame has relative positioning.
-                          The .mobile-frame has 'relative'. So absolute positioning is better.
-                     -->
-                </div>
+                <!-- Placeholder Card 2 -->
                 <div
-                    class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-3 px-6 flex justify-between items-center z-50">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-skating text-2xl text-gray-900"></i>
-                        <span class="text-lg font-bold">2</span>
+                    class="glass-card rounded-2xl p-8 border-dashed border-white/20 flex flex-col justify-center items-center text-center opacity-50 hover:opacity-100 transition">
+                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
+                        <i class="fas fa-users text-2xl text-gray-600"></i>
                     </div>
-                    <div class="flex gap-6 text-gray-400 text-xl">
-                        <button class="hover:text-gray-900"><i class="far fa-comment-alt"></i></button>
-                        <button class="hover:text-gray-900"><i class="far fa-paper-plane"></i></button>
-                    </div>
+                    <h3 class="text-xl font-bold mb-2">Crew Finder</h3>
+                    <p class="text-sm text-gray-500">Connect with local skate crews and hosts.</p>
+                    <span class="mt-4 text-xs font-bold text-lr-purple bg-lr-purple/10 px-3 py-1 rounded-full">COMING
+                        SOON</span>
                 </div>
+
             </div>
 
         </div>
+    </main>
 
-        <!-- Bottom Navigation (Yellow) -->
-        <div id="app-navigation"
-            class="bg-yellow-300 p-2 pb-5 flex justify-between items-center h-20 z-20 px-6 font-bold text-[10px] text-purple-900">
-            <button class="flex flex-col items-center gap-1 opacity-70 hover:opacity-100">
-                <div
-                    class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-yellow-300 transform rotate text-xl">
-                    <i class="fas fa-rainbow"></i>
-                </div>
-                <span>HOME</span>
-            </button>
-            <button onclick="switchTab('events')" id="nav-discover"
-                class="flex flex-col items-center gap-1 opacity-100">
-                <div
-                    class="w-10 h-10 rounded-full bg-gray-800 text-pink-500 flex items-center justify-center text-lg border-2 border-yellow-500">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <span>DISCOVER</span>
-            </button>
-            <button onclick="switchTab('create')" id="nav-create"
-                class="flex flex-col items-center gap-1 opacity-100 -mt-8">
-                <div
-                    class="w-14 h-14 rounded-full bg-gray-900 text-white flex items-center justify-center text-2xl shadow-lg border-4 border-yellow-300">
-                    <i class="fas fa-plus"></i>
-                </div>
-                <span>LET'S ROLL</span>
-            </button>
-            <button onclick="switchTab('learn')" id="nav-learn"
-                class="flex flex-col items-center gap-1 opacity-70 hover:opacity-100">
-                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-xl"><i
-                        class="fas fa-lightbulb text-orange-400"></i></div>
-                <span>LEARN</span>
-            </button>
-            <button class="flex flex-col items-center gap-1 opacity-70 hover:opacity-100">
-                <div
-                    class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center text-yellow-300 text-lg">
-                    <i class="fas fa-hand-peace"></i>
-                </div>
-                <span>PROFILE</span>
-            </button>
-        </div>
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Let's Roll. All rights reserved.</p>
+    </footer>
 
-    </div>
-
-    <style>
-        /* Toggle Switch CSS */
-        .toggle-checkbox:checked {
-            right: 0;
-            border-color: #4f46e5;
-        }
-
-        .toggle-checkbox:checked+.toggle-label {
-            background-color: #4f46e5;
-        }
-
-        #intl-toggle:checked {
-            border-color: #d97706;
-            /* Yellow-600 */
-        }
-
-        #intl-toggle:checked+.toggle-label {
-            background-color: #f59e0b;
-            /* Yellow-500 */
-        }
-
-        .toggle-checkbox {
-            right: 1.5rem;
-            /* Start position */
-            transition: all 0.3s;
-        }
-
-        .toggle-checkbox:checked {
-            right: 0;
-        }
-    </style>
-
-    <script>
-        // Tab Navigation
-        function switchTab(tabName) {
-            // Hide all views
-            document.getElementById('view-events').classList.add('hidden');
-            document.getElementById('view-learn').classList.add('hidden');
-            document.getElementById('view-create').classList.add('hidden');
-            document.getElementById('view-detail').classList.add('hidden');
-
-            // Handle Full Screen Mode (Hide Header/Nav)
-            if (tabName === 'detail') {
-                document.getElementById('app-header').classList.add('hidden');
-                document.getElementById('app-navigation').classList.add('hidden');
-                document.getElementById('view-detail').classList.remove('hidden');
-                return; // Exit early, no need to manage nav state
-            } else {
-                // Ensure Header/Nav are visible for other tabs
-                document.getElementById('app-header').classList.remove('hidden');
-                document.getElementById('app-navigation').classList.remove('hidden');
-            }
-
-            // Visual State Reset for Bottom Nav
-            // Reset Discover (Default active)
-            const navDiscover = document.getElementById('nav-discover');
-            if (navDiscover) {
-                navDiscover.classList.add('opacity-70');
-                navDiscover.classList.remove('opacity-100');
-            }
-            // Reset Learn
-            const navLearn = document.getElementById('nav-learn');
-            if (navLearn) {
-                navLearn.classList.add('opacity-70');
-                navLearn.classList.remove('opacity-100');
-            }
-
-            // Show selected view
-            if (tabName === 'events') {
-                document.getElementById('view-events').classList.remove('hidden');
-                if (navDiscover) {
-                    navDiscover.classList.remove('opacity-70');
-                    navDiscover.classList.add('opacity-100');
-                }
-            } else if (tabName === 'learn') {
-                document.getElementById('view-learn').classList.remove('hidden');
-                if (navLearn) {
-                    navLearn.classList.remove('opacity-70');
-                    navLearn.classList.add('opacity-100');
-                }
-            } else if (tabName === 'create') {
-                document.getElementById('view-create').classList.remove('hidden');
-            }
-        }
-
-        // Data Store
-        const eventsData = {
-            'skate-love': {
-                image: 'images/skate-love.png',
-                title: 'Skate Love Barcelona',
-                date: 'Sept 12-15 2026',
-                locationName: 'Mar Bella Skate Park',
-                address: 'Barcelona, Spain',
-                link: 'skatelovebarcelona.com',
-                description: 'Join the biggest international skate festival! Music, workshops, and beach vibes.',
-                attendees: '3.2k skaters'
-            },
-            'rollercon': {
-                image: 'images/rollercon.png',
-                title: 'RollerCon 2026',
-                date: 'July 8-12 2026',
-                locationName: 'Westgate Resort',
-                address: 'Las Vegas, USA',
-                link: 'rollercon.com',
-                description: 'The original roller derby convention. Tracks, classes, and parties all week long.',
-                attendees: '8k skaters'
-            },
-            'berlin': {
-                image: 'images/berlin-marathon.jpg',
-                title: 'BMW Berlin Marathon',
-                date: 'Sept 20 2026',
-                locationName: 'Brandenburg Gate',
-                address: 'Berlin, Germany',
-                link: 'bmw-berlin-marathon.com',
-                description: "The world's fastest inline marathon. Skate through the historic streets of Berlin.",
-                attendees: '5k skaters'
-            },
-            'thursday-night': {
-                image: 'images/thursday-night-skate.jpg',
-                title: 'Thursday Night Skate',
-                date: 'Feb 6 @ 7pm',
-                locationName: 'The Wende Museum',
-                address: '10808 Culver Blvd, Culver City',
-                link: 'heylo.com/events/thurs-night',
-                description: 'Weekly roll out around LA! All wheels welcome. Route varies, check story for updates.',
-                attendees: 'school.house.mach'
-            },
-            '90s-date': {
-                image: 'images/90s-skate-date.jpg',
-                title: "90's R&B Skate Date",
-                date: 'Feb 14 @ 5pm',
-                locationName: 'Main St',
-                address: 'Santa Monica, CA',
-                link: 'instagram.com/skatedatela',
-                description: 'Vibes only. Bring your own skates and groove to the best 90s jams.',
-                attendees: 'skate_date_la'
-            },
-            'shred-hunnies': {
-                image: 'images/shred-hunnies.jpg',
-                title: 'Shred Hunnies Meetup',
-                date: 'Sunday @ 1pm',
-                locationName: 'Stoner Skate Plaza',
-                address: 'Stoner Park, LA',
-                link: 'instagram.com/laskatehunnies',
-                description: 'Aggressive skating meetup for all levels. Come learn to grind!',
-                attendees: 'la_skate_hunnies'
-            },
-            'backwards-class': {
-                image: 'images/backwards-class.jpg',
-                title: 'Backwards Skating Class',
-                date: 'Jan 29 @ 7pm',
-                locationName: 'Moonlight Rollerway',
-                address: 'Glendale, CA',
-                link: 'learntoskate.com',
-                description: 'Master the art of retro backwards skating. Rentals included.',
-                attendees: 'retro_roller'
-            },
-            'santa-cruise': {
-                image: 'images/santa-cruise.jpg',
-                title: 'Santa Cruise 2025',
-                date: 'Dec 6 @ 2pm',
-                locationName: 'City Hall',
-                address: 'Santa Monica, CA',
-                link: 'beyondtheboard.org',
-                description: 'A rolling holiday party! Costumes mandatory. Santa hats for first 50.',
-                attendees: 'santa_slays'
-            },
-            'halloween': {
-                image: 'images/halloween-party.png',
-                title: 'Halloween Skate Party',
-                date: 'Oct 25 @ 5pm',
-                locationName: 'Kings Sports Center',
-                address: 'Burbank, CA',
-                link: 'kingsburbank.com',
-                description: 'Fright night on wheels! Costume contest at 8pm.',
-                attendees: 'spooky_skater'
-            }
-        };
-
-        function openEventDetail(eventId) {
-            const data = eventsData[eventId];
-            if (!data) return;
-
-            // Populate Elements
-            document.getElementById('detail-image').src = data.image;
-            document.getElementById('detail-title').textContent = data.title;
-            document.getElementById('detail-date').textContent = data.date;
-            document.getElementById('detail-location-name').textContent = data.locationName;
-            document.getElementById('detail-location-address').textContent = data.address;
-            document.getElementById('detail-link').textContent = data.link;
-            document.getElementById('detail-description').textContent = data.description;
-            document.getElementById('detail-attendees').textContent = data.attendees;
-
-            switchTab('detail');
-        }
-
-        // Learning Hub Filtering
-        function filterTutorials(category, btnElement) {
-            // 1. Update Buttons Visual State
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-black', 'text-white');
-                btn.classList.add('bg-gray-100', 'text-gray-600');
-            });
-            btnElement.classList.remove('bg-black', 'text-white'); // safety
-            btnElement.classList.remove('bg-gray-100', 'text-gray-600');
-            btnElement.classList.add('bg-black', 'text-white');
-
-            // 2. Filter Cards
-            const cards = document.querySelectorAll('.tutorial-card');
-            cards.forEach(card => {
-                const style = card.getAttribute('data-style');
-                if (category === 'all' || style === category) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        }
-
-        // Create Post Logic
-        function toggleTutorialParams(checkbox) {
-            const dropdown = document.getElementById('style-dropdown');
-            if (checkbox.checked) {
-                dropdown.classList.remove('hidden');
-            } else {
-                dropdown.classList.add('hidden');
-            }
-        }
-
-        function checkInternational(checkbox) {
-            if (checkbox.checked) {
-                // visual feedback for international
-                alert("🌍 Global Notification Enabled! This will alert users worldwide.");
-            }
-        }
-
-        function submitPost() {
-            const isTutorial = document.getElementById('tutorial-toggle').checked;
-            const isInternational = document.getElementById('intl-toggle').checked;
-            const style = document.getElementById('post-style').value;
-
-            if (isTutorial && style === "") {
-                alert("⚠️ Please select a Skate Style for this tutorial.");
-                return;
-            }
-
-            const postData = {
-                caption: document.querySelector('textarea').value,
-                isTutorial: isTutorial,
-                skateStyle: isTutorial ? style : null,
-                isInternational: isInternational,
-                timestamp: new Date().toISOString()
-            };
-
-            console.log("🚀 Post Created:", postData);
-            alert("Post created! Check console for data object.");
-
-            // Return to events view
-            switchTab('events');
-        }
-    </script>
 </body>
 
 </html>
