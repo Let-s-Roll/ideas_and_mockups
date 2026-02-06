@@ -15,9 +15,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Roll - Global Events & Learning Hub Mockup</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lr-red': '#ff6666',
+                        'lr-yellow': '#ffff33',
+                        'lr-green': '#66ff99',
+                        'lr-blue': '#66ccff',
+                        'lr-purple': '#9933cc',
+                        'lr-white': '#f0f0f0',
+                        'lr-grey': '#aaaaaa',
+                        'lr-black': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Millimetre', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Millimetre Fonts */
+        @font-face {
+            font-family: 'Millimetre';
+            src: url('../assets/fonts/Millimetre/fonts/Millimetre-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Millimetre';
+            src: url('../assets/fonts/Millimetre/fonts/Millimetre-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Millimetre';
+            src: url('../assets/fonts/Millimetre/fonts/Millimetre-Extrablack.otf') format('opentype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        /* Poppins Fonts */
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
         /* Custom Scrollbar hiding for clean horizontal scroll */
         .hide-scroll::-webkit-scrollbar {
             display: none;
@@ -33,12 +100,12 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             border-radius: 40px;
             overflow: hidden;
-            border: 8px solid #1f2937;
+            border: 8px solid #333333;
         }
     </style>
 </head>
 
-<body class="bg-gray-900 min-h-screen flex items-center justify-center p-8 font-sans">
+<body class="bg-lr-black min-h-screen flex items-center justify-center p-8 font-sans">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNLX567M" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
@@ -49,28 +116,28 @@
         <!-- LEFT: Presentation & Promo -->
         <div class="max-w-md text-white space-y-8">
             <div>
-                <h1 class="text-5xl font-black tracking-tighter mb-4">Event Discovery <br><span
-                        class="text-yellow-400">Mockup v1</span></h1>
+                <h1 class="text-5xl font-black font-display tracking-tighter mb-4">Event Discovery <br><span
+                        class="text-lr-yellow">Mockup v1</span></h1>
                 <p class="text-gray-400 leading-relaxed">Experience the interactive prototype for our new global event
                     discovery feed. Test the "World Tour" carousel and "Local Scene" geolocation features.</p>
             </div>
 
             <!-- PROMO BOX (Relocated) -->
             <div
-                class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden group border border-white/10 transform transition hover:-translate-y-1">
+                class="bg-gradient-to-r from-lr-purple to-indigo-900 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden group border border-white/10 transform transition hover:-translate-y-1">
                 <!-- Decor circle -->
                 <div
-                    class="absolute -right-5 -top-5 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:bg-yellow-400/20 transition duration-700">
+                    class="absolute -right-5 -top-5 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:bg-lr-yellow/20 transition duration-700">
                 </div>
 
                 <div class="relative z-10">
                     <span
-                        class="bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block shadow-sm">OUR
+                        class="bg-lr-yellow text-lr-black text-xs font-bold px-3 py-1 rounded-full mb-4 inline-block shadow-sm">OUR
                         MISSION</span>
-                    <h3 class="text-3xl font-black italic tracking-tight mb-2">Connect & Conquer</h3>
+                    <h3 class="text-3xl font-black italic font-display tracking-tight mb-2">Connect & Conquer</h3>
                     <p class="text-indigo-100 text-sm mb-6 leading-relaxed">We believe it should be effortless for
                         skaters to find relevant events, discover local communities, and never miss a session.</p>
-                    <div class="flex items-center gap-2 text-yellow-300 font-bold text-sm">
+                    <div class="flex items-center gap-2 text-lr-yellow font-bold text-sm">
                         <i class="fas fa-check-circle"></i> <span>Global Reach, Local Soul</span>
                     </div>
                 </div>
@@ -87,27 +154,32 @@
             class="mobile-frame w-full max-w-md h-[850px] bg-white relative flex flex-col shrink-0 shadow-2xl shadow-indigo-500/20 ring-8 ring-gray-800">
 
             <!-- App Header (Yellow) -->
-            <div id="app-header" class="bg-yellow-300 sticky top-0 z-30 shadow-sm">
+            <div id="app-header" class="bg-lr-yellow sticky top-0 z-30 shadow-sm">
                 <!-- Top Bar: Chat | Discover | Profile -->
                 <div class="px-4 py-3 flex justify-between items-center">
-                    <div class="flex gap-4 text-purple-900">
+                    <div class="flex gap-4 text-lr-black">
                         <i class="fas fa-question-circle text-xl"></i>
                         <i class="fas fa-comment text-xl"></i>
                     </div>
-                    <h1 class="text-xl font-black text-purple-900 tracking-tight">Discover</h1>
-                    <div class="flex gap-4 text-purple-900 items-center">
-                        <span class="bg-purple-100 p-1 rounded-full"><i class="fas fa-user-plus text-sm"></i></span>
+                    <!-- LOGO INSTEAD OF TEXT -->
+                    <div class="h-8">
+                        <img src="../assets/main-logo.svg" class="h-full object-contain" alt="Let's Roll">
+                    </div>
+                    <div class="flex gap-4 text-lr-black items-center">
+                        <span
+                            class="bg-lr-purple text-white p-1 rounded-full w-6 h-6 flex items-center justify-center"><i
+                                class="fas fa-user-plus text-[10px]"></i></span>
                         <i class="fas fa-bell text-xl"></i>
                     </div>
                 </div>
 
                 <!-- Sub-Navigation: Places | People | Events -->
                 <div class="flex font-bold text-sm text-center pb-2">
-                    <div class="flex-1 text-gray-500/70 py-2 cursor-pointer hover:text-purple-900"><i
+                    <div class="flex-1 text-lr-black/60 py-2 cursor-pointer hover:text-lr-black"><i
                             class="fas fa-map-marker-alt mr-1"></i> Places</div>
-                    <div class="flex-1 text-gray-500/70 py-2 cursor-pointer hover:text-purple-900"><i
+                    <div class="flex-1 text-lr-black/60 py-2 cursor-pointer hover:text-lr-black"><i
                             class="fas fa-hand-paper mr-1"></i> People</div>
-                    <div class="flex-1 text-purple-900 py-2 border-b-4 border-purple-900 bg-white/20"><i
+                    <div class="flex-1 text-lr-black py-2 border-b-4 border-lr-black bg-white/20"><i
                             class="fas fa-calendar-alt mr-1"></i> Events</div>
                 </div>
             </div>
@@ -122,9 +194,10 @@
                     <!-- SPOTLIGHT CAROUSEL (Horizontal) -->
                     <div class="mt-4 pl-5">
                         <div class="flex items-center gap-2 mb-3">
-                            <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wide">The World Tour 🌍</h2>
+                            <h2 class="text-sm font-bold font-display text-gray-500 uppercase tracking-wide">The World
+                                Tour 🌍</h2>
                             <span
-                                class="bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">INTERNATIONAL</span>
+                                class="bg-lr-yellow text-lr-black text-[10px] font-bold px-2 py-0.5 rounded-full">INTERNATIONAL</span>
                         </div>
 
                         <!-- Horizontal Scroll Container -->
@@ -481,10 +554,10 @@
                             </div>
 
                             <!-- ADMIN FEATURE: International Event -->
-                            <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-100">
+                            <div class="bg-lr-yellow/10 p-4 rounded-xl border border-lr-yellow/30">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-2">
-                                        <i class="fas fa-globe-americas text-yellow-600"></i>
+                                        <i class="fas fa-globe-americas text-yellow-700"></i>
                                         <span class="font-bold text-gray-800">International Event</span>
                                     </div>
                                     <!-- Switch -->
@@ -492,9 +565,9 @@
                                         class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
                                         <input onchange="checkInternational(this)" type="checkbox" name="toggle"
                                             id="intl-toggle"
-                                            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-yellow-200 right-0" />
+                                            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-lr-yellow/50 right-0" />
                                         <label for="intl-toggle"
-                                            class="toggle-label block overflow-hidden h-6 rounded-full bg-yellow-400 cursor-pointer"></label>
+                                            class="toggle-label block overflow-hidden h-6 rounded-full bg-lr-yellow cursor-pointer"></label>
                                     </div>
                                 </div>
                                 <p class="text-xs text-gray-500 mt-2">Triggers global notification. Use only for major
@@ -507,101 +580,16 @@
                     </div>
 
                     <!-- VIEW 4: EVENT DETAIL (Dynamic Injection Target) -->
-                    <div id="view-detail"
-                        class="hidden bg-gray-50 min-h-full absolute inset-0 z-40 overflow-y-auto pb-20">
-                        <!-- Header -->
-                        <div class="bg-yellow-300 sticky top-0 z-30 shadow-sm px-4 py-4 flex items-center gap-4">
-                            <button onclick="switchTab('events')" class="text-purple-900"><i
-                                    class="fas fa-arrow-left text-xl"></i></button>
-                            <h1 class="text-xl font-black text-purple-900 tracking-tight">Public Activity</h1>
-                        </div>
 
-                        <!-- Detail Content -->
-                        <div class="pb-6">
-                            <!-- Hero Image -->
-                            <img id="detail-image" src="" class="w-full aspect-square object-cover">
-
-                            <div class="p-5">
-                                <!-- Title Block -->
-                                <h1 id="detail-title" class="text-2xl font-black leading-tight text-gray-900 mb-1"></h1>
-                                <p id="detail-date" class="text-gray-500 text-sm mb-6"></p>
-
-                                <!-- Action Cards -->
-                                <div class="space-y-3 mb-6">
-                                    <!-- Location -->
-                                    <div
-                                        class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
-                                        <div
-                                            class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-blue-400">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                        </div>
-                                        <div>
-                                            <p id="detail-location-name" class="font-bold text-sm text-gray-900"></p>
-                                            <p id="detail-location-address" class="text-xs text-gray-500"></p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Link -->
-                                    <div
-                                        class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
-                                        <div
-                                            class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-yellow-400">
-                                            <i class="fas fa-link"></i>
-                                        </div>
-                                        <div>
-                                            <p class="font-bold text-sm text-gray-900">Learn More</p>
-                                            <p id="detail-link" class="text-xs text-blue-500 truncate w-56"></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Description -->
-                                <div class="prose prose-sm text-gray-600 mb-6">
-                                    <p id="detail-description"></p>
-                                </div>
-
-                                <!-- Footer Stoked -->
-                                <div class="flex items-center gap-3 mt-8">
-                                    <div class="flex -space-x-2">
-                                        <img class="w-6 h-6 rounded-full border-2 border-white"
-                                            src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
-                                        <img class="w-6 h-6 rounded-full border-2 border-white"
-                                            src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
-                                    </div>
-                                    <p class="text-xs text-gray-500"><span id="detail-attendees"
-                                            class="font-bold text-gray-900"></span> and others were stoked</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Interaction Sticky Footer -->
-                        <div class="fixed bottom-20 left-0 right-0 p-4 pointer-events-none">
-                            <!-- Centering wrapper for mobile frame simulation if needed, but 'fixed' works relative to viewport. 
-                          Since we are inside a .mobile-frame with explicit width/height, absolute positioning relative to that frame is safer if the frame has relative positioning.
-                          The .mobile-frame has 'relative'. So absolute positioning is better.
-                     -->
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-3 px-6 flex justify-between items-center z-50">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-skating text-2xl text-gray-900"></i>
-                                <span class="text-lg font-bold">2</span>
-                            </div>
-                            <div class="flex gap-6 text-gray-400 text-xl">
-                                <button class="hover:text-gray-900"><i class="far fa-comment-alt"></i></button>
-                                <button class="hover:text-gray-900"><i class="far fa-paper-plane"></i></button>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
 
                 <!-- Bottom Navigation (Yellow) -->
                 <div id="app-navigation"
-                    class="bg-yellow-300 p-2 pb-5 flex justify-between items-center h-20 z-20 px-6 font-bold text-[10px] text-purple-900">
+                    class="bg-lr-yellow p-2 pb-5 flex justify-between items-center h-20 z-20 px-6 font-bold text-[10px] text-lr-black">
                     <button class="flex flex-col items-center gap-1 opacity-70 hover:opacity-100">
                         <div
-                            class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-yellow-300 transform rotate text-xl">
+                            class="w-10 h-10 rounded-full bg-black flex items-center justify-center text-lr-yellow transform rotate text-xl">
                             <i class="fas fa-rainbow"></i>
                         </div>
                         <span>HOME</span>
@@ -609,7 +597,7 @@
                     <button onclick="switchTab('events')" id="nav-discover"
                         class="flex flex-col items-center gap-1 opacity-100">
                         <div
-                            class="w-10 h-10 rounded-full bg-gray-800 text-pink-500 flex items-center justify-center text-lg border-2 border-yellow-500">
+                            class="w-10 h-10 rounded-full bg-gray-800 text-pink-500 flex items-center justify-center text-lg border-2 border-lr-yellow">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <span>DISCOVER</span>
@@ -617,7 +605,7 @@
                     <button onclick="switchTab('create')" id="nav-create"
                         class="flex flex-col items-center gap-1 opacity-100 -mt-8">
                         <div
-                            class="w-14 h-14 rounded-full bg-gray-900 text-white flex items-center justify-center text-2xl shadow-lg border-4 border-yellow-300">
+                            class="w-14 h-14 rounded-full bg-gray-900 text-white flex items-center justify-center text-2xl shadow-lg border-4 border-lr-yellow">
                             <i class="fas fa-plus"></i>
                         </div>
                         <span>LET'S ROLL</span>
@@ -630,11 +618,92 @@
                     </button>
                     <button class="flex flex-col items-center gap-1 opacity-70 hover:opacity-100">
                         <div
-                            class="w-10 h-10 rounded-full bg-purple-900 flex items-center justify-center text-yellow-300 text-lg">
+                            class="w-10 h-10 rounded-full bg-lr-purple flex items-center justify-center text-lr-yellow text-lg">
                             <i class="fas fa-hand-peace"></i>
                         </div>
                         <span>PROFILE</span>
                     </button>
+                </div>
+
+                <!-- VIEW 4: EVENT DETAIL (Relocated to top level) -->
+                <div id="view-detail" class="hidden bg-gray-50 min-h-full absolute inset-0 z-40 overflow-y-auto pb-20">
+                    <!-- Header -->
+                    <div class="bg-lr-yellow sticky top-0 z-30 shadow-sm px-4 py-4 flex items-center gap-4">
+                        <button onclick="switchTab('events')" class="text-lr-black"><i
+                                class="fas fa-arrow-left text-xl"></i></button>
+                        <h1 class="text-xl font-black text-lr-black tracking-tight">Public Activity</h1>
+                    </div>
+
+                    <!-- Detail Content -->
+                    <div class="pb-6">
+                        <!-- Hero Image -->
+                        <img id="detail-image" src="" class="w-full aspect-square object-cover">
+
+                        <div class="p-5">
+                            <!-- Title Block -->
+                            <h1 id="detail-title" class="text-2xl font-black leading-tight text-gray-900 mb-1"></h1>
+                            <p id="detail-date" class="text-gray-500 text-sm mb-6"></p>
+
+                            <!-- Action Cards -->
+                            <div class="space-y-3 mb-6">
+                                <!-- Location -->
+                                <div
+                                    class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-blue-400">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p id="detail-location-name" class="font-bold text-sm text-gray-900"></p>
+                                        <p id="detail-location-address" class="text-xs text-gray-500"></p>
+                                    </div>
+                                </div>
+
+                                <!-- Link -->
+                                <div
+                                    class="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-yellow-400">
+                                        <i class="fas fa-link"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm text-gray-900">Learn More</p>
+                                        <p id="detail-link" class="text-xs text-blue-500 truncate w-56"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="prose prose-sm text-gray-600 mb-6">
+                                <p id="detail-description"></p>
+                            </div>
+
+                            <!-- Footer Stoked -->
+                            <div class="flex items-center gap-3 mt-8">
+                                <div class="flex -space-x-2">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white"
+                                        src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white"
+                                        src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                                </div>
+                                <p class="text-xs text-gray-500"><span id="detail-attendees"
+                                        class="font-bold text-gray-900"></span> and others were stoked</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interaction Sticky Footer -->
+                    <div
+                        class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 p-3 px-6 flex justify-between items-center z-50">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-skating text-2xl text-gray-900"></i>
+                            <span class="text-lg font-bold">2</span>
+                        </div>
+                        <div class="flex gap-6 text-gray-400 text-xl">
+                            <button class="hover:text-gray-900"><i class="far fa-comment-alt"></i></button>
+                            <button class="hover:text-gray-900"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                    </div>
                 </div>
 
             </div>

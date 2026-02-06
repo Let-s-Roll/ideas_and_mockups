@@ -48,6 +48,28 @@
         }
     </script>
     <style>
+        /* Millimetre Fonts */
+        @font-face {
+            font-family: 'Millimetre';
+            src: url('assets/fonts/Millimetre/fonts/Millimetre-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Millimetre';
+            src: url('assets/fonts/Millimetre/fonts/Millimetre-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Millimetre';
+            src: url('assets/fonts/Millimetre/fonts/Millimetre-Extrablack.otf') format('opentype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
         body {
             background-color: #333333;
             /* lr-black */
@@ -78,10 +100,8 @@
     <!-- Header -->
     <header class="py-8 px-6 border-b border-white/10 sticky top-0 bg-black/80 backdrop-blur-md z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <i class="fas fa-skating text-3xl text-lr-yellow"></i>
-                <h1 class="text-2xl font-black tracking-tighter uppercase">Let's Roll <span
-                        class="text-lr-yellow text-sm align-top">LABS</span></h1>
+            <div class="h-10">
+                <img src="assets/main-logo.svg" alt="Let's Roll LABS" class="h-full object-contain">
             </div>
             <a href="https://github.com/Let-s-Roll/ideas_and_mockups" target="_blank"
                 class="text-gray-400 hover:text-white transition">
@@ -97,7 +117,7 @@
             <!-- Hero -->
             <div class="mb-16 text-center max-w-3xl mx-auto">
                 <h2
-                    class="text-5xl md:text-7xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                    class="text-5xl md:text-7xl font-black font-display tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
                     Building the Future of Skating.
                 </h2>
                 <p class="text-xl text-gray-400 leading-relaxed">
@@ -160,7 +180,8 @@
                     <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
                         <i class="fas fa-users text-2xl text-gray-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Crew Finder</h3>
+                    <h1 class="text-2xl font-black font-display tracking-tighter uppercase">Let's Roll <span
+                            class="text-lr-yellow text-sm align-top">LABS</span></h1>
                     <p class="text-sm text-gray-500">Connect with local skate crews and hosts.</p>
                     <span class="mt-4 text-xs font-bold text-lr-purple bg-lr-purple/10 px-3 py-1 rounded-full">COMING
                         SOON</span>
