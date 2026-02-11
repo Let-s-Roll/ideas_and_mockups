@@ -103,10 +103,33 @@
             <div class="h-10">
                 <img src="assets/main-logo.svg" alt="Let's Roll LABS" class="h-full object-contain">
             </div>
-            <a href="https://github.com/Let-s-Roll/ideas_and_mockups" target="_blank"
-                class="text-gray-400 hover:text-white transition">
-                <i class="fab fa-github text-2xl"></i>
-            </a>
+            <div class="flex items-center gap-6">
+                <!-- Website Link -->
+                <a href="https://lets-roll.app" target="_blank"
+                    class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 hover:text-lr-yellow transition hidden md:block">
+                    Official Website
+                </a>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-4 md:border-l md:border-white/10 md:pl-6">
+                    <a href="https://www.facebook.com/letsrollapp" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors" title="Facebook">
+                        <i class="fab fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/lets.roll.app/" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors" title="Instagram">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@lets-roll" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors" title="YouTube">
+                        <i class="fab fa-youtube text-lg"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@lets.roll.app" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors" title="TikTok">
+                        <i class="fab fa-tiktok text-lg"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -117,12 +140,12 @@
             <!-- Hero -->
             <div class="mb-16 text-center max-w-3xl mx-auto">
                 <h2
-                    class="text-5xl md:text-7xl font-black font-display tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
-                    Building the Future of Skating.
+                    class="text-5xl md:text-7xl font-black font-display tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500 uppercase">
+                    Open Roadmap.
                 </h2>
                 <p class="text-xl text-gray-400 leading-relaxed">
-                    Explore our active prototypes, verified mockups, and upcoming concepts as we build the ultimate
-                    global skating platform.
+                    <span class="text-lr-yellow font-bold">Building in Public:</span> You voted, we listened. See the
+                    future of the app (and play with it) right now.
                 </p>
             </div>
 
@@ -130,16 +153,16 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Prototype Card: Event Discovery -->
-                <a href="./event-mockup/" class="group block">
+                <a id="event-discovery" href="./event-mockup/" class="group block scroll-mt-32">
                     <div
                         class="glass-card rounded-2xl overflow-hidden transition-all duration-500 h-full flex flex-col">
                         <!-- Preview Image Area -->
                         <div class="h-64 bg-gray-900 relative overflow-hidden">
                             <img src="./event-mockup/images/skate-love.png"
                                 class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition duration-700">
-                            <div class="absolute top-4 right-4">
+                            <div class="absolute top-4 right-4 flex flex-col items-end gap-2">
                                 <span
-                                    class="bg-green-500/20 text-green-400 border border-green-500/50 text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm flex items-center gap-2">
+                                    class="bg-green-500/20 text-green-400 border border-green-500/50 text-[10px] font-black px-3 py-1 rounded-full backdrop-blur-sm flex items-center gap-2">
                                     <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
                                     LIVE PROTOTYPE
                                 </span>
@@ -148,52 +171,105 @@
 
                         <!-- Content -->
                         <div class="p-8 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-bold mb-3 group-hover:text-lr-yellow transition">Event Discovery
-                            </h3>
+                            <h3 class="text-2xl font-bold mb-1 group-hover:text-lr-yellow transition uppercase">Event
+                                Discovery</h3>
+                            <p class="text-[10px] text-lr-yellow font-black uppercase tracking-widest mb-4 opacity-70">
+                                Solving Ideas #3 & #4</p>
                             <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
-                                An immersive, interactive mobile mockup for discovering global festivals and local skate
-                                meetups. Features dynamic detail views, filtering, and a "Learning Hub".
+                                Our top-voted tool for <span class="text-white font-bold">Local Visibility</span>.
+                                Built specifically to solve the challenge of missing events and ghost scenes, this
+                                prototype connects you to the heartbeat of your local skate community.
                             </p>
-                            <div
-                                class="flex items-center text-sm font-bold text-white group-hover:gap-2 transition-all">
-                                Launch Prototype <i class="fas fa-arrow-right ml-2 text-lr-yellow"></i>
+                            <div class="mt-auto pt-6 border-t border-white/5 flex flex-col gap-4">
+                                <div
+                                    class="flex items-center text-sm font-bold text-white group-hover:gap-2 transition-all">
+                                    Launch Prototype <i class="fas fa-arrow-right ml-2 text-lr-yellow"></i>
+                                </div>
+                                <span class="text-[9px] font-black text-lr-yellow/60 uppercase tracking-tighter italic">
+                                    64% of skaters preferred this over other ideas
+                                </span>
                             </div>
                         </div>
                     </div>
                 </a>
 
-                <!-- Placeholder Card 1 -->
-                <div
-                    class="glass-card rounded-2xl p-8 border-dashed border-white/20 flex flex-col justify-center items-center text-center opacity-50 hover:opacity-100 transition">
-                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
-                        <i class="fas fa-compass text-2xl text-gray-600"></i>
+                <!-- Placeholder Card: Community Hub -->
+                <div id="community-hub"
+                    class="glass-card rounded-2xl p-8 border-dashed border-white/20 flex flex-col items-start transition scroll-mt-32 relative overflow-hidden">
+                    <div
+                        class="w-16 h-16 rounded-full bg-lr-purple/20 flex items-center justify-center mb-6 border border-lr-purple/50">
+                        <i class="fas fa-users text-2xl text-lr-purple"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Spot Finder</h3>
-                    <p class="text-sm text-gray-500">Global map for finding and rating skate spots.</p>
-                    <span class="mt-4 text-xs font-bold text-lr-purple bg-lr-purple/10 px-3 py-1 rounded-full">COMING
-                        SOON</span>
+                    <h3 class="text-2xl font-bold mb-1 uppercase text-lr-purple">Community Hub</h3>
+                    <p class="text-[10px] text-lr-purple font-black uppercase tracking-widest mb-4 opacity-70">
+                        Idea #1: The Social Mandate</p>
+                    <p class="text-sm text-gray-400 mb-6 flex-1">
+                        The <span class="text-white font-bold">#1 community request</span>. We're building a space to
+                        find your crew and end the "skating alone" problem, creating a true digital home for your local
+                        roll.
+                    </p>
+                    <div class="w-full pt-6 border-t border-white/5 flex flex-col gap-4">
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-xs font-bold text-lr-purple bg-lr-purple/10 px-3 py-1 rounded-full border border-lr-purple/20">NEXT
+                                UP</span>
+                        </div>
+                        <span class="text-[9px] font-black text-lr-purple/60 uppercase tracking-tighter italic">
+                            67% of skaters preferred this over other ideas
+                        </span>
+                    </div>
                 </div>
 
-                <!-- Placeholder Card 2 -->
-                <div
-                    class="glass-card rounded-2xl p-8 border-dashed border-white/20 flex flex-col justify-center items-center text-center opacity-50 hover:opacity-100 transition">
-                    <div class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6">
-                        <i class="fas fa-users text-2xl text-gray-600"></i>
+                <!-- Placeholder Card: Learning Hub -->
+                <div id="learning-hub"
+                    class="glass-card rounded-2xl p-8 border-dashed border-white/20 flex flex-col items-start transition scroll-mt-32 relative overflow-hidden">
+                    <div
+                        class="w-16 h-16 rounded-full bg-lr-blue/20 flex items-center justify-center mb-6 border border-lr-blue/50">
+                        <i class="fas fa-graduation-cap text-2xl text-lr-blue"></i>
                     </div>
-                    <h1 class="text-2xl font-black font-display tracking-tighter uppercase">Let's Roll <span
-                            class="text-lr-yellow text-sm align-top">LABS</span></h1>
-                    <p class="text-sm text-gray-500">Connect with local skate crews and hosts.</p>
-                    <span class="mt-4 text-xs font-bold text-lr-purple bg-lr-purple/10 px-3 py-1 rounded-full">COMING
-                        SOON</span>
+                    <h3 class="text-2xl font-bold mb-1 uppercase text-lr-blue">Learning Hub</h3>
+                    <p class="text-[10px] text-lr-blue font-black uppercase tracking-widest mb-4 opacity-70">
+                        Ideas #20 & #23: Progression engine</p>
+                    <p class="text-sm text-gray-400 mb-6 flex-1">
+                        The ultimate <span class="text-white font-bold">Progression Engine</span>. You asked for trick
+                        bucket lists and tutorial libraries—we're building the hub to help you track your growth and
+                        master your moves.
+                    </p>
+                    <div class="w-full pt-6 border-t border-white/5 flex flex-col gap-4">
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-xs font-bold text-lr-blue bg-lr-blue/10 px-3 py-1 rounded-full border border-lr-blue/20 uppercase">PLANNED</span>
+                        </div>
+                        <span class="text-[9px] font-black text-lr-blue/60 uppercase tracking-tighter italic">
+                            55% of skaters preferred this over other ideas
+                        </span>
+                    </div>
                 </div>
 
             </div>
 
         </div>
+
+        </div>
+
+        </div>
     </main>
 
+    <!-- CTA Section -->
+    <section class="py-20 bg-lr-yellow/5 border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h3 class="text-3xl font-black font-display mb-6">SHAPE OUR CODE.</h3>
+            <p class="text-xl text-gray-400 mb-10">Every time you pick a winner on our voting site, you are literally
+                shaping what we build next.</p>
+            <a href="https://all-our-ideas.citizens.is/group/1024/" target="_blank"
+                class="inline-block bg-lr-yellow text-lr-black font-black px-10 py-4 rounded-full hover:scale-105 transition shadow-2xl shadow-lr-yellow/20 uppercase tracking-tighter">
+                Keep Voting <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-8 text-center text-gray-600 text-sm">
+    <footer class="py-8 text-center text-gray-600 text-sm border-t border-white/5 bg-black/20">
         <p>&copy; 2026 Let's Roll. All rights reserved.</p>
     </footer>
 

@@ -1,0 +1,83 @@
+id,created_at,active,score,wins,losses,content,imageUrl,user_created
+64852,"2024-11-07T08:58:10.924Z",true,67.29857819905213,141,68,"Allow users to find local skate communities.","",false
+64850,"2024-11-07T08:58:10.917Z",true,65.17412935323384,130,69,"Allow skaters to upload details about skate areas, like photos, type of location, and terrain.","",false
+64857,"2024-11-07T08:58:10.940Z",true,63.91304347826087,146,82,"Show local activities or events.","",false
+64846,"2024-11-07T08:58:10.900Z",true,62.616822429906534,133,79,"Allow users to add events and view local skate activities.","",false
+64784,"2024-11-07T08:58:10.714Z",true,61.94690265486725,139,85,"Add a forum where users can ask questions, discuss, and share knowledge about skating, tricks, spots, equipment, etc.","",false
+64807,"2024-11-07T08:58:10.780Z",true,61.05263157894737,115,73,"Add a “Find a Skate Buddy” option with skill levels (beginner, intermediate, expert).","",false
+64858,"2024-11-07T08:58:10.943Z",true,60,122,81,"Improve ways to find local skaters and communicate via direct message.","",false
+64805,"2024-11-07T08:58:10.774Z",true,59.70149253731343,119,80,"Provide a “Find a Skate Park/Spot” feature to locate nearby skate spots.","",false
+64822,"2024-11-07T08:58:10.822Z",true,59.65665236051502,138,93,"Enable route ratings and notes to flag poor surfaces or challenging areas.","",false
+64783,"2024-11-07T08:58:10.711Z",true,59.55555555555555,133,90,"Change the home feed to show posts from people closest to you and move community posts to a Discover page.","",false
+64809,"2024-11-07T08:58:10.786Z",true,59.4059405940594,119,81,"Create a skate buddy finder and allow tagging friends in sessions.","",false
+64861,"2024-11-07T08:58:10.953Z",true,58.57142857142858,122,86,"Add a skate events section where users can list events.","",false
+64859,"2024-11-07T08:58:10.946Z",true,57.6271186440678,135,99,"Add a section for skate-related events near users, like roller dance parties or competitions.","",false
+64808,"2024-11-07T08:58:10.783Z",true,57.61904761904761,120,88,"Enable users to create and join groups, such as city groups or derby teams.","",false
+64810,"2024-11-07T08:58:10.788Z",true,57.476635514018696,122,90,"Incorporate event calendars for local skate events, like roller derbies and group rollouts.","",false
+64855,"2024-11-07T08:58:10.933Z",true,57.21153846153846,118,88,"Allow group gathering planning with notifications for nearby skaters.","",false
+64860,"2024-11-07T08:58:10.950Z",true,56.56108597285068,124,95,"Allow feedback on specific route sections, like surface quality or hazards.","",false
+64841,"2024-11-07T08:58:10.884Z",true,55.76036866359447,120,95,"Add a review system for skate spots, allowing photos and notes.","",false
+64797,"2024-11-07T08:58:10.751Z",true,54.824561403508774,124,102,"When learning is ready, allow users to add tricks and challenges to a personal bucket list.","",false
+64827,"2024-11-07T08:58:10.837Z",true,54.63917525773196,105,87,"Add session details later if users forget to start tracking initially.","",false
+64815,"2024-11-07T08:58:10.803Z",true,54.63414634146342,111,92,"Allow filtering by country and region to find local skaters.","",false
+64803,"2024-11-07T08:58:10.768Z",true,54.24528301886793,114,96,"Add a library of tutorials and tips for learning new moves.","",false
+64844,"2024-11-07T08:58:10.894Z",true,54.106280193236714,111,94,"Add group creation for local skaters with shared interests, like skate moms with strollers.","",false
+64790,"2024-11-07T08:58:10.732Z",true,53.98230088495575,121,103,"Enable tracking and audio to run in the background while the app is minimized to save battery life.","",false
+64825,"2024-11-07T08:58:10.831Z",true,53.52112676056338,113,98,"Create a progress tracker for skills and tricks with a confidence log for each session.","",false
+64838,"2024-11-07T08:58:10.873Z",true,53.45622119815668,115,100,"Enable users to click on skate routes and see photos and descriptions.","",false
+64824,"2024-11-07T08:58:10.828Z",true,53.30396475770925,120,105,"Allow users to resume sessions if they accidentally hit “stop.”","",false
+64820,"2024-11-07T08:58:10.817Z",true,53.191489361702125,124,109,"Include tags to describe terrain, safety, and conditions in posts.","",false
+64840,"2024-11-07T08:58:10.880Z",true,53.11203319502075,127,112,"Allow users to submit their favorite skate spots with descriptions.","",false
+64786,"2024-11-07T08:58:10.720Z",true,53.04347826086957,121,107,"Create a place to log terrain notes with information on gravel, steep hills, traffic, and other hazards.","",false
+64791,"2024-11-07T08:58:10.735Z",true,52.97029702970298,106,94,"Add editing capabilities for skate session details, including start/stop times.","",false
+64804,"2024-11-07T08:58:10.771Z",true,52.96803652968036,115,102,"Introduce a “Rate the Skate” feature with questions like level, terrain, and steepness.","",false
+64794,"2024-11-07T08:58:10.743Z",true,52.659574468085104,98,88,"Allow location to be added manually to avoid keeping tracking on for extended periods, such as at a skate park.","",false
+64831,"2024-11-07T08:58:10.850Z",true,52.58215962441315,111,100,"Enable offline tracking to allow sessions even in areas with low signal.","",false
+64826,"2024-11-07T08:58:10.834Z",true,52.40384615384615,108,98,"Add a feature to trim GPS data to avoid sharing sensitive locations.","",false
+64800,"2024-11-07T08:58:10.759Z",true,52.293577981651374,113,103,"Enable “Skate Together” mode to connect multiple profiles during group sessions.","",false
+64816,"2024-11-07T08:58:10.806Z",true,52.23214285714286,116,106,"Show a calendar with a history of skating activities, showing monthly totals.","",false
+64842,"2024-11-07T08:58:10.887Z",true,52.083333333333336,99,91,"Provide a way to manage submissions like skate spots and update photos or details.","",false
+64856,"2024-11-07T08:58:10.936Z",true,51.741293532338304,103,96,"Link with Google searches to show skating rinks, parks, and trails.","",false
+64796,"2024-11-07T08:58:10.748Z",true,51.724137931034484,104,97,"Integrate tracking with mobile health apps, like Apple Health, to sync data from wearables.","",false
+64849,"2024-11-07T08:58:10.913Z",true,51.541850220264315,116,109,"Add a community calendar for events like roller discos.","",false
+64792,"2024-11-07T08:58:10.737Z",true,51.41509433962265,108,102,"Allow users to plan sessions with local skaters based on style—like jam skaters with jam skaters or ramp skaters with ramp skaters.","",false
+64817,"2024-11-07T08:58:10.809Z",true,50.96153846153846,105,101,"Add a privacy feature to obscure the start of sessions from the user’s home.","",false
+64834,"2024-11-07T08:58:10.859Z",true,50.427350427350426,117,115,"Show real-time distance skated during a session without finalizing it.","",false
+64787,"2024-11-07T08:58:10.723Z",true,50,99,99,"Allow users to add sessions after the fact if they forgot to turn the app on.","",false
+64823,"2024-11-07T08:58:10.825Z",true,49.746192893401016,97,98,"Display recent skaters in an area (e.g., last 10–20 days) for potential meetups.","",false
+64813,"2024-11-07T08:58:10.797Z",true,49.549549549549546,109,111,"Include a filter or search by skating style to help users find compatible skate buddies.","",false
+64845,"2024-11-07T08:58:10.897Z",true,49.54128440366973,107,109,"Enable filtering in the feed by skate style, location, and more.","",false
+64848,"2024-11-07T08:58:10.908Z",true,48.9010989010989,88,92,"Allow users to join and promote local skating crews.","",false
+64853,"2024-11-07T08:58:10.927Z",true,48.61111111111111,104,110,"Provide recommendations for popular skating spots.","",false
+64793,"2024-11-07T08:58:10.740Z",true,48.292682926829265,98,105,"Enable adding sessions manually without GPS data if recording was missed.","",false
+64830,"2024-11-07T08:58:10.847Z",true,48.258706467661696,96,103,"Provide options to remove the last few meters of a tracked route to obscure home location.","",false
+64835,"2024-11-07T08:58:10.862Z",true,47.136563876651984,106,119,"Mark skate spots by difficulty level (e.g., red for difficult, green for all levels).","",false
+64788,"2024-11-07T08:58:10.726Z",true,46.63212435233161,89,102,"Provide an option to manually add session location and duration for privacy or other reasons.","",false
+64802,"2024-11-07T08:58:10.765Z",true,46.330275229357795,100,116,"Include a checklist of roller skate and inline tricks that users can track as they learn.","",false
+64864,"2024-11-07T08:58:10.969Z",true,46.22641509433962,97,113,"Enable tagging friends in sessions.","",false
+64847,"2024-11-07T08:58:10.904Z",true,46.19047619047619,96,112,"Enable chatting with friends in the app.","",false
+64795,"2024-11-07T08:58:10.746Z",true,46.07843137254902,93,109,"Provide real-time tracking so users can see distance skated without finalizing the session.","",false
+64799,"2024-11-07T08:58:10.756Z",true,46.0377358490566,121,142,"Display city/country on public profiles to help users find local skaters.","",false
+64843,"2024-11-07T08:58:10.891Z",true,45.45454545454545,94,113,"Include an annual calendar of skate events and festivals worldwide.","",false
+64798,"2024-11-07T08:58:10.754Z",true,44.339622641509436,93,117,"Add icons for skate styles (derby, freestyle, street, etc.) next to profile pictures.","",false
+64818,"2024-11-07T08:58:10.812Z",true,44.32432432432433,81,102,"Display skater location (country, area) to help people connect.","",false
+64819,"2024-11-07T08:58:10.815Z",true,44.1747572815534,90,114,"Provide short “how-to” video clips for trick practice.","",false
+64851,"2024-11-07T08:58:10.920Z",true,44.09090909090909,96,122,"Enable users to create events and allow RSVP registration.","",false
+64811,"2024-11-07T08:58:10.791Z",true,43.91534391534391,82,105,"Allow editing of skated times if the app was turned on halfway through a session.","",false
+64812,"2024-11-07T08:58:10.794Z",true,43.81443298969072,84,108,"Provide an option to delete a route if it was started by accident.","",false
+64789,"2024-11-07T08:58:10.729Z",true,43.39622641509434,91,119,"Add visual goals and tracking for tricks. Users could list tricks they want to learn and check them off when completed.","",false
+64862,"2024-11-07T08:58:10.961Z",true,42.780748663101605,79,106,"Add a feature for skaters to log skate locations with address, notes, and more.","",false
+64839,"2024-11-07T08:58:10.877Z",true,42.211055276381906,83,114,"Add filters for skate spots based on terrain, hills, or ramps.","",false
+64833,"2024-11-07T08:58:10.856Z",true,42.10526315789473,87,120,"Include stats showing total distance skated in a session.","",false
+64829,"2024-11-07T08:58:10.843Z",true,41.284403669724774,89,127,"Add calories burned, fastest speed, and options to adjust stop time for more accurate stats.","",false
+64837,"2024-11-07T08:58:10.869Z",true,40.5,80,118,"Track trails and allow filtering by less crowded places.","",false
+64836,"2024-11-07T08:58:10.866Z",true,40.19138755980861,83,124,"Add skate park locations.","",false
+64821,"2024-11-07T08:58:10.820Z",true,39.473684210526315,74,114,"Allow editing of session workout times.","",false
+64801,"2024-11-07T08:58:10.762Z",true,39.25233644859813,83,129,"Allow users to add different skate types in their profile and select skates for each session.","",false
+64806,"2024-11-07T08:58:10.777Z",true,39.15094339622642,82,128,"Include stats like average speed, max speed, and calorie count in the tracking feature.","",false
+64863,"2024-11-07T08:58:10.965Z",true,37.15846994535519,67,114,"Add a distance selector in the “Local” tab to define the user’s local area.","",false
+64854,"2024-11-07T08:58:10.930Z",true,34.55497382198953,65,124,"Add a place on the profile to list skate models, allowing performance comparisons.","",false
+64832,"2024-11-07T08:58:10.853Z",true,33.64485981308411,71,141,"Offer information about different skate styles (artistic, slalom, derby, etc.) to inspire users.","",false
+64814,"2024-11-07T08:58:10.800Z",true,32.11009174311927,69,147,"Add dark mode.","",false
+64785,"2024-11-07T08:58:10.717Z",true,31.775700934579437,67,145,"Include an “Alert me when I leave” option for stationary activities, so users don’t accidentally leave tracking on and disrupt session data.","",false
+64828,"2024-11-07T08:58:10.840Z",true,29.777777777777775,66,157,"Include lock screen notifications when a session is in progress as a reminder.","",false
